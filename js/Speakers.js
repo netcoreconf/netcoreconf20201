@@ -19,6 +19,18 @@ sessionize.loaderspeakers = function() {
                 counter++;
                 elmnt.innerHTML = this.responseText;
                 elmnt.removeAttribute("data-sessionize-load-url-speakers");
+                
+                elmnt.querySelectorAll('li[data-speakerid]').forEach((speaker) => {
+                    const speakerPhoto = speaker.querySelector('.sz-speaker__photo');
+                    const speakerName = speaker.querySelector('.sz-speaker__name');
+
+                    if (speakerPhoto && speakerName) {
+                        const image = speakerPhoto.querySelector('img');
+                        const speakerNameText = speakerName.children[0].innerText;
+                        if (image) {
+                            image.setAttribute('alt', `Foto de '${speakerNameText}'`);
+                        }
+                    }})
 
                 if (counter === z.length) {
                     sessionize.onLoad();
@@ -43,3 +55,9 @@ if (typeof sessionize.loaderspeakersLoaded === 'undefined') {
 sessionize.eventTimezone = 'UTC +1';
 sessionize.eventCityName = 'Brussels, Copenhagen, Madrid, Paris';
 sessionize.showLocalTimezone = true;
+
+
+/*
+
+
+*/
