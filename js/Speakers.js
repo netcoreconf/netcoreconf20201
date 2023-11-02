@@ -28,7 +28,7 @@ sessionize.loaderspeakers = function() {
                         const image = speakerPhoto.querySelector('img');
                         const speakerNameText = speakerName.children[0].innerText;
                         if (image) {
-                            image.setAttribute('alt', `Foto de '${speakerNameText}'`);
+                            image.setAttribute('alt', `Photo of '${speakerNameText}'`);
                         }
                     }})
 
