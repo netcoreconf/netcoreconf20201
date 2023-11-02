@@ -25,6 +25,12 @@ body.de_light,.de_light{
 	color:#777777;
 }
 
+img {
+	max-width:100%;
+	max-height:100%;
+}
+
+
 .rtl,
 .rtl .tp-caption{
 	text-align:right;
@@ -5408,15 +5414,26 @@ i.i_h3{
 color:#606060;
 }
 
-.wm{
+.wm-container{
+	container-type: inline-size;
 	width:100%;
 	position:relative;
-	font-size:200px;
 	text-align:center;
-	font-weight:bold;
 	top:33px;
+}
+
+.wm-text {
+	color: transparent;
+	font-size:12rem;
+	font-weight:bold;
 	-webkit-user-select:none;-moz-user-select:-moz-none;
 	-ms-user-select:none;user-select:none;
+}
+
+@container (max-width: 950px) {
+	.wm-text {
+		font-size: 4rem;
+	}
 }
 
 .wm.dark{
@@ -5424,14 +5441,12 @@ color:#606060;
 }
 
 .wm.dark.wm-border{
-	font-size:280px;
 	color:rgba(0,0,0,0);
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: rgba(255,255,255,.2);
 }
 
 .wm.light.wm-border{
-	font-size:280px;
 	color:rgba(0,0,0,0);
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: rgba(0,0,0,.1);
