@@ -28,6 +28,7 @@ sessionize.loaderspeakers = function() {
                         const speakerNameText = speakerName.children[0].innerText;
                         if (image) {
                             image.setAttribute('alt', `Photo of '${speakerNameText}'`);
+                            image.setAttribute('loading', "lazy");
                         }
                     }})
 
