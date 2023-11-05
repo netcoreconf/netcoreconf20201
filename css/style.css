@@ -1172,11 +1172,20 @@ header:not(.header-mobile) #mainmenu>li:hover ul.mega {
 /* ================================================== */
 section {
 	padding: 90px 0 90px 0;
-}
-
-section {
 	background: #101010;
 }
+
+section#section-team {
+	background-image: url("../images-event/bg/1.jpg");
+	@supports (background-image: url("../images-event/bg/1.webp")) {
+		background-image: url("../images-event/bg/1.webp");
+	}
+}
+
+section#section-hero {
+	background-image: url("../images-event/bg/8.jpg");
+}
+
 
 section.custom-1 {
 	border-bottom-left-radius: 100% 100%;
