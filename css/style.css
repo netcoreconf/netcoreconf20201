@@ -1184,6 +1184,9 @@ section#section-team {
 
 section#section-hero {
 	background-image: url("../images-event/bg/8.jpg");
+	@supports (background-image: url("../images-event/bg/8.webp")) {
+		background-image: url("../images-event/bg/8.webp");
+	}
 }
 
 
@@ -5300,7 +5303,7 @@ a:hover,
 }
 
 
-.item img {
+.item picture img {
 	width: 100%;
 	height: auto;
 }
