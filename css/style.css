@@ -25,6 +25,12 @@ body.de_light,.de_light{
 	color:#777777;
 }
 
+img {
+	max-width:100%;
+	max-height:100%;
+}
+
+
 .rtl,
 .rtl .tp-caption{
 	text-align:right;
@@ -5408,15 +5414,26 @@ i.i_h3{
 color:#606060;
 }
 
-.wm{
+.wm-container{
+	container-type: inline-size;
 	width:100%;
 	position:relative;
-	font-size:200px;
 	text-align:center;
-	font-weight:bold;
 	top:33px;
+}
+
+.wm-text {
+	color: transparent;
+	font-size:12rem;
+	font-weight:bold;
 	-webkit-user-select:none;-moz-user-select:-moz-none;
 	-ms-user-select:none;user-select:none;
+}
+
+@container (max-width: 950px) {
+	.wm-text {
+		font-size: 4rem;
+	}
 }
 
 .wm.dark{
@@ -5424,14 +5441,12 @@ color:#606060;
 }
 
 .wm.dark.wm-border{
-	font-size:280px;
 	color:rgba(0,0,0,0);
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: rgba(255,255,255,.2);
 }
 
 .wm.light.wm-border{
-	font-size:280px;
 	color:rgba(0,0,0,0);
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: rgba(0,0,0,.1);
@@ -6688,36 +6703,48 @@ margin-bottom: -3px;
 
 
 .separator {
-  line-height: 0.5;
-  text-align: center;
-  margin:30px 0 30px 0;
+    position: relative;
+    width: 100%;
+    height: 2px; /* Establece la altura de la línea */
+    background-color: #000; /* Cambia el color de la línea a tu preferencia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-top: 15px;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    position: absolute;
+    height: 1px; /* Mismo valor que la altura de la línea */
+    background-color: #ffffff; /* Mismo color que la línea principal */
+	overflow: hidden;
+}
+
+.separator::before {
+    left: 0;
+    right: 50%;
+    top: 3px;
+}
+
+.separator::after {
+    left: 50%;
+    right: 0;
+    top: 3px;
+	margin-left: 3px;
 }
 .separator span {
   display: inline-block;
   position: relative;
  
 }
-.separator span:before,
-.separator span:after {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid rgba(255,255,255,.1);
-  top: 5px;
-  width: 300px;
-}
-.separator span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-.separator span:after {
-  left: 100%;
-  margin-left: 15px;
-}
 
 .separator span  i{
 font-size:6px;
 padding:0;
-margin:0;
+margin-left:5px;
+margin-right:5px;
 float:none;
 }
 
