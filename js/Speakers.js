@@ -1,5 +1,5 @@
 document.write('<style type="text/css">     .sz-spinner {         width: 40px;         height: 40px;         margin: 100px auto;         background-color: #1ab394;         border-radius: 100%;         -webkit-animation: sz-scaleout 1.0s infinite ease-in-out;         animation: sz-scaleout 1.0s infinite ease-in-out;     }      @-webkit-keyframes sz-scaleout {         0% {             -webkit-transform: scale(0)         }          100% {             -webkit-transform: scale(1.0);             opacity: 0;         }     }      @keyframes sz-scaleout {         0% {             -webkit-transform: scale(0);             transform: scale(0);         }          100% {             -webkit-transform: scale(1.0);             transform: scale(1.0);             opacity: 0;         }     } </style>');
-document.write('<div class="sessionize-loaderspeakers" data-sessionize-load-url-speakers="https://sessionize.com/api/v2/adqq1j8d/view/SpeakerWall?under=True"><div class="sz-spinner"></div></div>');
+document.write('<div class="sessionize-loaderspeakers" data-sessionize-load-url-speakers="https://sessionize.com/api/v2/q841bycp/view/SpeakerWall?under=True"><div class="sz-spinner"></div></div>');
 
 if (typeof sessionize === 'undefined') {
     var sessionize = {};
